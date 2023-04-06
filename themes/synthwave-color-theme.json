@@ -176,7 +176,7 @@
     },
     {
       "name": "Variable",
-      "scope": ["variable", "entity.name.variable"],
+      "scope": ["entity.name.variable"],
       "settings": {
         "foreground": "#ff7edb"
       }
@@ -292,7 +292,7 @@
       "name": "Function",
       "scope": ["entity.name.function", "variable.function"],
       "settings": {
-        "foreground": "#36f9f6"
+        "foreground": "#72f1b8"
       }
     },
     {
@@ -318,7 +318,7 @@
     },
     {
       "name": "Control keyword",
-      "scope": "keyword.control",
+      "scope": "keyword.control.c",
       "settings": {
         "foreground": "#fede5d"
       }
@@ -527,8 +527,18 @@
       }
     },
     {
+      "name": "C Global Variable",
+      "scope": ["variable.other.global"],
+      "settings": {
+        "foreground": "#cc6fff"
+      }
+    },
+    {
       "name": "C# local variable",
-      "scope": "entity.name.variable.local.cs",
+      "scope": [
+        "entity.name.variable.local.cs",
+        "variable.other.local"
+      ],
       "settings": {
         "foreground": "#ff7edb"
       }
@@ -537,10 +547,12 @@
       "name": "C# properties and fields",
       "scope": [
         "entity.name.variable.field.cs",
-        "entity.name.variable.property.cs"
+        "entity.name.variable.property.cs",
+        "property",
+        "variable.other.member"
       ],
       "settings": {
-        "foreground": "#ff7edb"
+        "foreground": "#00a3ee"
       }
     },
     {
@@ -555,10 +567,20 @@
       "name": "C preprocessors",
       "scope": [
         "keyword.control.directive.include.c",
-        "keyword.control.directive.define.c"
+        "keyword.control.directive.define.c",
       ],
       "settings": {
-        "foreground": "#72f1b8"
+        "foreground": "#aeee38",
+      }
+    },
+    {
+      "name": "C preprocessors",
+      "scope": [
+        "keyword.control.directive.conditional"
+      ],
+      "settings": {
+        "foreground": "#aeee38",
+        "fontStyle": "bold"
       }
     },
     {
@@ -566,6 +588,26 @@
       "scope": "storage.modifier.c",
       "settings": {
         "foreground": "#fe4450"
+      }
+    },
+    {
+      "name": "enummember",
+      "scope": [
+        "variable.other.enummember",
+        "punctuation.separator.delimiter.c"
+      ],
+      "settings": {
+        "foreground": "#2ee2fa"
+      }
+    },
+    {
+      "name": "Macro",
+      "scope": [
+        "entity.name.function.preprocessor",
+        "meta.preprocessor",
+      ],
+      "settings": {
+        "foreground": "#2ee2fa"
       }
     },
     {
@@ -817,7 +859,7 @@
     },
     {
       "name": "Basic source colours",
-      "scope": ["source.dart", "source.python", "source.scala"],
+      "scope": ["source.dart", "source.python", "source.scala", "source.c", "source.cpp"],
       "settings": {
         "foreground": "#ff7edbff"
       }
